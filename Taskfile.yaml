@@ -1,0 +1,10 @@
+version: 3
+tasks:
+  monitoring:up:
+    desc: "Start Prometheus and Grafana"
+    cmds:
+      - docker-compose -f docker-compose.monitoring.yml up -d
+  monitoring:down:
+    desc: "Stop Prometheus and Grafana"
+    cmds:
+      - docker-compose -f docker-compose.monitoring.yml down
